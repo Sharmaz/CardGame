@@ -1,22 +1,69 @@
 .Card {
-  width: 200px;
+  width: 170px;
   background: #c2ac37;
-  border: 5px solid #808080;
+  border: 5px solid #000;
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
   -webkit-border-radius: 0.5rem;
   border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 .Card-description {
   background: #fff;
   padding: 0.5rem;
   font-size: 12px;
+  margin-bottom: 0.5rem;
+  border: 2px solid #000;
+}
+.Card-name {
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
 }
 .Card-image {
   width: 100%;
 }
-body {
-  font-family: Arial;
-  margin: 0;
-  padding: 0;
+.Card-attack {
+  background: #000;
+  color: #fff;
+  font-size: 0.8rem;
+}
+.Battle {
+  padding: 0.3rem;
+}
+.Battle-antagonist {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.Battle-antagonist > div {
+  margin: 5px;
+}
+.Battle-player {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.Battle-player > div {
+  margin: 5px;
 }
 .Layout {
   background-image: url("../images/city.jpg");
@@ -44,10 +91,6 @@ body {
   margin: 0.5rem;
   min-height: 100vh;
   padding: 0.5rem;
-  border: 1px solid #a52a2a;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 .Layout > section {
   margin: 0.5rem;
@@ -67,18 +110,10 @@ body {
   justify-content: space-between;
 }
 .Layout-status {
-  border: 1px solid #008000;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   width: 200px;
 }
 .Layout-battle {
   background-image: url("../images/pattern.jpg");
-  border: 1px solid #ffa500;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   -o-box-flex: 1;
@@ -89,18 +124,10 @@ body {
   margin: 0.5rem;
 }
 .Layout-phases {
-  border: 1px solid #800080;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   position: relative;
   width: 200px;
 }
 .Layout-antagonist {
-  border: 1px solid #add8e6;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -115,10 +142,6 @@ body {
   justify-content: space-between;
 }
 .Layout-player {
-  border: 1px solid #808080;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -151,4 +174,9 @@ body {
   border: 5px dashed #f00;
   position: absolute;
   right: 0;
+}
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
 }

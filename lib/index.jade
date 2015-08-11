@@ -7,19 +7,4 @@ head
 body
 	//- h1 Marvel Card Game
 	//- 
-
-	section.Layout
-		section.Layout-antagonist 
-			each card in [1,2,3,4,5]
-				include ./card/template.jade
-		section.Layout-main
-			.Layout-status
-				each name in ["iRobles", "Sharmaz"]
-					include ./status/template.jade
-			.Layout-battle battle
-			.Layout-phases 
-				- text = "WTF! ese ataque fue super efectivo, has bajado 300 puntos a tu oponente"
-				include ./phases/template.jade
-		section.Layout-player 
-			each card in [1,2,3,4,5]
-				include ./card/template.jade
+	include ./layout/template.jade
