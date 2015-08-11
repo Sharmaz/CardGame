@@ -1,0 +1,14 @@
+.Card {
+  width: 200px;
+  background: #c2ac37;
+  border: 5px solid #808080;
+  border-radius: 0.5rem;
+}
+.Card-description {
+  background: #fff;
+  padding: 0.5rem;
+  font-size: 12px;
+}
+.Card-image {
+  width: 100%;
+}
