@@ -1,1 +1,66 @@
+@import "nib"
 @import "./card/styles.styl"
+
+test(color = red)
+	border 1px solid color
+	box-sizing border-box
+
+body 
+	font-family Arial
+	margin 0
+	padding 0
+	
+.Layout
+	background-image url('../images/city.jpg')
+	background-size cover
+	display flex
+	flex-direction column
+	justify-content space-between
+	margin 0.5rem
+	min-height 100vh
+	padding 0.5rem
+	test(brown)
+	> section
+		margin 0.5rem
+	&-main 
+		display flex
+		justify-content space-between
+	&-status
+		test(green)
+		width 200px
+	&-battle
+		background-image url('../images/pattern.jpg')
+		test(orange)
+		flex 1
+		margin 0.5rem
+	&-phases
+		test(purple)
+		position relative
+		width 200px
+	&-antagonist
+		test(lightblue)
+		display flex
+		justify-content space-between
+	&-player
+		test(gray)
+		display flex
+		justify-content space-between
+		
+.Status
+	background orange
+	&-player
+		background red
+		color white
+		margin 0
+		padding .5rem
+	&-points
+		margin 0
+		padding .5rem
+		text-align center
+
+.Phases 
+	background white 
+	border 5px dashed red
+	position absolute
+	right 0	
+		

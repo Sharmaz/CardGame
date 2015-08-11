@@ -2,6 +2,7 @@
   width: 200px;
   background: #c2ac37;
   border: 5px solid #808080;
+  -webkit-border-radius: 0.5rem;
   border-radius: 0.5rem;
 }
 .Card-description {
@@ -11,4 +12,143 @@
 }
 .Card-image {
   width: 100%;
+}
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+.Layout {
+  background-image: url("../images/city.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin: 0.5rem;
+  min-height: 100vh;
+  padding: 0.5rem;
+  border: 1px solid #a52a2a;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.Layout > section {
+  margin: 0.5rem;
+}
+.Layout-main {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.Layout-status {
+  border: 1px solid #008000;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 200px;
+}
+.Layout-battle {
+  background-image: url("../images/pattern.jpg");
+  border: 1px solid #ffa500;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0.5rem;
+}
+.Layout-phases {
+  border: 1px solid #800080;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  width: 200px;
+}
+.Layout-antagonist {
+  border: 1px solid #add8e6;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.Layout-player {
+  border: 1px solid #808080;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.Status {
+  background: #ffa500;
+}
+.Status-player {
+  background: #f00;
+  color: #fff;
+  margin: 0;
+  padding: 0.5rem;
+}
+.Status-points {
+  margin: 0;
+  padding: 0.5rem;
+  text-align: center;
+}
+.Phases {
+  background: #fff;
+  border: 5px dashed #f00;
+  position: absolute;
+  right: 0;
 }
