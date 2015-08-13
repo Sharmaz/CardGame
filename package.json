@@ -1,0 +1,7 @@
+{
+	"scripts": {
+		"jade": "jade --watch --pretty lib/*.jade --out .",
+		"stylus": "stylus --use nib --watch lib/app.styl --out public/css",
+		"server": "http-server ."
+	}
+}
