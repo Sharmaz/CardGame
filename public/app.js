@@ -1,0 +1,44 @@
+'use strict';
+
+var $ = window.jQuery;
+var url = 'http://gateway.marvel.com:80/v1/public/series?title=avengers&apikey=513b198c262e14c0fbdbd548fc5d0afc';
+// var url2 = 'http://gateway.marvel.com/v1/public/characters/1009146'
+var apikey = '513b198c262e14c0fbdbd548fc5d0afc';
+var api = new MarvelApi(key);
+
+api.findSeries('avengers').then(function (characters) {
+	var characters = characters.items;
+	var primises = [];
+	var _iteratorNormalCompletion = true;
+	var _didIteratorError = false;
+	var _iteratorError = undefined;
+
+	try {
+		for (var _iterator = characters[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+			var _characters = _step.value;
+
+			var primse = api.getResourceURI(character.resourceURI);
+			promises.push(promise);
+		}
+	} catch (err) {
+		_didIteratorError = true;
+		_iteratorError = err;
+	} finally {
+		try {
+			if (!_iteratorNormalCompletion && _iterator['return']) {
+				_iterator['return']();
+			}
+		} finally {
+			if (_didIteratorError) {
+				throw _iteratorError;
+			}
+		}
+	}
+
+	return Promise.all(promises);
+}).then(function (characters) {
+	console.log(characters);
+})['catch'](function (err) {
+	debugger;
+	console.error(err);
+});
