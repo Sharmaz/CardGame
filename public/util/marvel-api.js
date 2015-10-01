@@ -7,25 +7,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var $ = window.jQuery;
 
 var MarvelApi = (function () {
-	function MarvelApi(apikey) {
+	function MarvelApi(key) {
 		_classCallCheck(this, MarvelApi);
 
-		this.apikey = apikey;
+		this.key = key;
 		this.baseUrl = 'http://gateway.marvel.com:80/v1/public/';
 	}
 
 	_createClass(MarvelApi, [{
 		key: 'findSeries',
 		value: function findSeries(title) {
-			var url = this.baseUrl + 'series?title=' + title + '&apikey=' + this.apikey;
+			var url = this.baseUrl + 'series?title=' + title + '&apikey=' + this.key;
 			return Promise.resolve($.get(url)).then(function (res) {
 				return res.data.results[0];
 			});
 		}
 	}, {
 		key: 'getResourceURI',
-		value: function getResourceURI(request) {
-			var url = resourceURI + '?apikey=' + this.apikey;
+		value: function getResourceURI(resourceURI) {
+			var url = resourceURI + '?apikey=' + this.key;
 			return Promise.resolve($.get(url));
 			then(function (res) {
 				return res.data.results[0];
