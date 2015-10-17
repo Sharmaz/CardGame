@@ -11,7 +11,7 @@ var MarvelApi = (function () {
 		_classCallCheck(this, MarvelApi);
 
 		this.key = key;
-		this.baseUrl = 'http://gateway.marvel.com:80/v1/public/';
+		this.baseUrl = 'http://gateway.marvel.com/v1/public/';
 	}
 
 	_createClass(MarvelApi, [{
