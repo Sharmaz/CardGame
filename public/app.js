@@ -38,17 +38,20 @@ api.findSeries('avengers').then(function (serie) {
 	}
 
 	return Promise.all(promises);
+}).then(function (characters) {
+	return characters.filter(function (character) {
+		return !!character.thumbnail && !!character.description;
+	});
 })
 /*.then ((characters) => {
-	return characters.filter((character) => {
-		return !!character.thumbnail 
-	})
-})*/
+	return characters.filter((character) => return !!character.thumbnail)
+})
+*/
 .then(function (characters) {
 
 	//por cada carta
 	$('.Card').each(function (i, item) {
-		var character = characters[i].data.results[0];
+		var character = characters[i];
 		var $this = $(item);
 		var $image = $this.find('.Card-image');
 		var $description = $this.find('.Card-description');
@@ -61,11 +64,6 @@ api.findSeries('avengers').then(function (serie) {
 	//cambiar las imagenes .Card-image
 	//cambiar descripcion .Card-description
 	//cambiar nombre .Card-name
-});
-then(function (characters) {
-	return characters.filter(function (character) {
-		return !!character.thumbnail;
-	});
 })['catch'](function (err) {
 
 	console.error(err);

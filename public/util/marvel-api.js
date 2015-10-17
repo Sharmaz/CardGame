@@ -26,8 +26,7 @@ var MarvelApi = (function () {
 		key: 'getResourceURI',
 		value: function getResourceURI(resourceURI) {
 			var url = resourceURI + '?apikey=' + this.key;
-			return Promise.resolve($.get(url));
-			then(function (res) {
+			return Promise.resolve($.get(url)).then(function (res) {
 				return res.data.results[0];
 			});
 		}
