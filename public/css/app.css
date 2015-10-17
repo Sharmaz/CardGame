@@ -19,6 +19,10 @@
   color: #fff;
   text-transform: uppercase;
   margin: 0 0 0.5rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 .Card-image {
   width: 100%;
