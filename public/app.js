@@ -57,6 +57,19 @@ api.findSeries('avengers').then(function (serie) {
 		var template = renderCharacter(character);
 		var $card = $(template);
 		$('.Battle-player').append($card);
+		$card.on('click', function (event) {
+			var $this = $(this);
+			var attack = $this.find('.Card-attack');
+
+			console.log(attack.data('attack'));
+		});
+
+		/*		$card.on('click', function (event) {
+  			$card.trigger('capiclick', template)
+  		})
+  		$card.on('capiclick', function (){
+  			console.log('hubo capiclick')
+  		})*/
 	}
 	//por cada carta
 	// $('.Card').each((i, item) => {
@@ -85,7 +98,7 @@ function renderCharacter(character) {
 	// character.length -> 20
 	// characters[Math.floor(Math.random() * characters.length -1)]
 
-	return '<div class="Card"<h2 class="Card-name">' + character.name + '</h2><img src="' + character.thumbnail.path + '.' + character.thumbnail.extension + '" alt="' + character.name + '" class="Card-image"/>\n        <div class="Card-description">' + character.description + '</div>\n        <div class="Card-attack">' + attackPoints + ' Puntos de Ataque</div>\n      </div>\n      </div>';
+	return '<div class="Card"<h2 class="Card-name">' + character.name + '</h2><img src="' + character.thumbnail.path + '.' + character.thumbnail.extension + '" alt="' + character.name + '" class="Card-image"/>\n        <div class="Card-description">' + character.description + '</div>\n        <div class="Card-attack" data-attack="' + attackPoints + '">' + attackPoints + ' Puntos de Ataque</div>\n      </div>\n      </div>';
 
 	/*	
  Asi se hacia antes de ecmascript 6
