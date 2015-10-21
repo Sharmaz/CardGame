@@ -40,7 +40,7 @@ api.findSeries('avengers').then(function (serie) {
 	return Promise.all(promises);
 }).then(function (characters) {
 	return characters.filter(function (character) {
-		return !!character.thumbnail && !!character.description;
+		return !!character.thumbnail; //&& !!character.description
 	});
 })
 /*.then ((characters) => {
@@ -49,7 +49,10 @@ api.findSeries('avengers').then(function (serie) {
 */
 .then(function (characters) {
 
+	characters = shuffle(characters);
+
 	for (var i = 0; i < 5; i++) {
+		var index = Math.floor(Math.random() * characters.length - 1);
 		var character = characters[i];
 		var template = renderCharacter(character);
 		var $card = $(template);
@@ -77,8 +80,12 @@ api.findSeries('avengers').then(function (serie) {
 });
 
 function renderCharacter(character) {
+	var attackPoints = Math.ceil(Math.random() * 500) + 500;
+	//genera un numero del 500 al 1000
+	// character.length -> 20
+	// characters[Math.floor(Math.random() * characters.length -1)]
 
-	return '<div class="Card"<h2 class="Card-name">' + character.name + '</h2><img src="' + character.thumbnail.path + '.' + character.thumbnail.extension + '" alt="' + character.name + '" class="Card-image"/>\n        <div class="Card-description">' + character.description + '</div>\n        <div class="Card-attack">500 puntos de ataque</div>\n      </div>\n      </div>';
+	return '<div class="Card"<h2 class="Card-name">' + character.name + '</h2><img src="' + character.thumbnail.path + '.' + character.thumbnail.extension + '" alt="' + character.name + '" class="Card-image"/>\n        <div class="Card-description">' + character.description + '</div>\n        <div class="Card-attack">' + attackPoints + ' Puntos de Ataque</div>\n      </div>\n      </div>';
 
 	/*	
  Asi se hacia antes de ecmascript 6
@@ -88,4 +95,14 @@ function renderCharacter(character) {
  
      return template
   */
+}
+
+function shuffle(arr) {
+	for (var i = 0; i < arr.length; i++) {
+		var tmp = arr[i];
+		var index = Math.floor(Math.random() * arr.length - 1);
+		arr[i] = arr[index];
+		arr[index] = tmp;
+		return arr;
+	}
 }
