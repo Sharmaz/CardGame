@@ -49,18 +49,25 @@ api.findSeries('avengers').then(function (serie) {
 */
 .then(function (characters) {
 
-	//por cada carta
-	$('.Card').each(function (i, item) {
+	for (var i = 0; i < 5; i++) {
 		var character = characters[i];
-		var $this = $(item);
-		var $image = $this.find('.Card-image');
-		var $description = $this.find('.Card-description');
-		var $name = $this.find('.Card-name');
+		var template = renderCharacter(character);
+		var $card = $(template);
+		$('.Battle-player').append($card);
+	}
+	//por cada carta
+	// $('.Card').each((i, item) => {
+	// 	let character = characters[i]
+	// 	let $this = $(item)
+	// 	let $image = $this.find('.Card-image')
+	// 	let $description = $this.find('.Card-description')
+	// 	let $name = $this.find('.Card-name')
 
-		$image.attr('src', character.thumbnail.path + '.' + character.thumbnail.extension);
-		$name.text(character.name);
-		$description.text(character.description);
-	});
+	// 	$image.attr('src', `${character.thumbnail.path}.${character.thumbnail.extension}`)
+	// 	$name.text(character.name)
+	// 	$description.text(character.description)
+
+	// })
 	//cambiar las imagenes .Card-image
 	//cambiar descripcion .Card-description
 	//cambiar nombre .Card-name
@@ -68,3 +75,17 @@ api.findSeries('avengers').then(function (serie) {
 
 	console.error(err);
 });
+
+function renderCharacter(character) {
+
+	return '<div class="Card"<h2 class="Card-name">' + character.name + '</h2><img src="' + character.thumbnail.path + '.' + character.thumbnail.extension + '" alt="' + character.name + '" class="Card-image"/>\n        <div class="Card-description">' + character.description + '</div>\n        <div class="Card-attack">500 puntos de ataque</div>\n      </div>\n      </div>';
+
+	/*	
+ Asi se hacia antes de ecmascript 6
+ var template = '<div class="Card">\n'+ '<h2 class="Card-name">'+ character.name + '</h2>'+'<img src="'+ character.thumbnail.path + '.' + character.thumbnail.extension
+ 	+ '" alt="' + character.name + '" class="Card-image"/>\n'+ '<div class="Card-description">' + character.description + '</div>\n'
+     + '<div class="Card-attack">500 puntos de ataque</div>\n'
+ 
+     return template
+  */
+}
