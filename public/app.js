@@ -52,17 +52,21 @@ api.findSeries('avengers').then(function (serie) {
 	characters = shuffle(characters);
 
 	for (var i = 0; i < 5; i++) {
-		var index = Math.floor(Math.random() * characters.length - 1);
 		var character = characters[i];
-		var template = renderCharacter(character);
-		var $card = $(template);
-		$('.Battle-player').append($card);
-		$card.on('click', function (event) {
-			var $this = $(this);
-			var attack = $this.find('.Card-attack');
+		drawCharacter(character);
+		/*		let index = Math.floor(Math.random() * characters.length -1)
+  		let character = characters[i]
+  		let template = renderCharacter(character)
+  		let $card = $(template)
+  		
+  		$card.on('click', function (event) {
+  			let $this = $(this)
+  			let attack = $this.find('.Card-attack')
+  
+  			console.log(attack.data('attack'))
+  		})*/
 
-			console.log(attack.data('attack'));
-		});
+		//$('.Battle-player').append($card)
 
 		/*		$card.on('click', function (event) {
   			$card.trigger('capiclick', template)
@@ -92,6 +96,25 @@ api.findSeries('avengers').then(function (serie) {
 	console.error(err);
 });
 
+$('.CharacterForm').on('submit', function (event) {
+	event.preventDefault();
+
+	var name = $(this).find('.CharacterForm-name').val();
+	api.searchCharacter(name).then(function (character) {
+		drawCharacter(character);
+	})['catch'](function (reason) {
+		if (reason === 'no se encontro el personaje') {
+			$('.CharacterForm-message').text(reason);
+		}
+	});
+
+	//llamar a la api de marvel
+	//dibujar una carta con el personaje que regrese la api
+	//- si no regresa un personaje -> no hay personaje
+	//- si regresa solo un personaje -> dibujar la carta
+	//- si regresa mas de un personaje -> dibujar carta con el primer
+});
+
 function renderCharacter(character) {
 	var attackPoints = Math.ceil(Math.random() * 500) + 500;
 	//genera un numero del 500 al 1000
@@ -118,4 +141,16 @@ function shuffle(arr) {
 		arr[index] = tmp;
 		return arr;
 	}
+}
+
+function drawCharacter(character) {
+	var template = renderCharacter(character);
+	var $card = $(template);
+	$card.on('click', function (event) {
+		var $this = $(this);
+		var attack = $this.find('.Card-attack');
+
+		console.log(attack.data('attack'));
+	});
+	$('.Battle-player').append($card);
 }

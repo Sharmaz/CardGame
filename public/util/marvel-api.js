@@ -63,6 +63,22 @@ var MarvelApi = (function () {
 				return Promise.resolve(datos);
 			});
 		}
+	}, {
+		key: 'searchCharacter',
+		value: function searchCharacter(name) {
+			//characters?name=iron%20man&apikey=513b198c262e14c0fbdbd548fc5d0afc
+			var url = this.baseUrl + '/characters?name=' + name + '&apikey=' + this.key;
+			return new Promise(function (done) {
+				$.get(url).done(function (data) {
+					done(data);
+				});
+			}).then(function (res) {
+				if (!res.data.total) {
+					return Promise.reject('no se encontro el personaje');
+				}
+				return res.data.results[0];
+			});
+		}
 	}]);
 
 	return MarvelApi;
