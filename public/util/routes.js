@@ -9,29 +9,27 @@ var homeTemplate = '<section class="Layout">\n    <section class="Layout-antagon
 
 var signinTemplate = '<label>Ingresa tu nombre</label>\n  <input type="text" id="firstName" name="firstName" tabindex="1" placeholder="nombre" class="Signin-name-input"/>\n  <button tabindex="2" class="Signin-button">Ingresar</button>';
 
-page('/', home);
+page('/', restrict, home);
 page('/signin', signin);
-
 page();
+
+function restrict(ctx, next) {
+  console.log('Restricting');
+  console.log('Context :' + JSON.stringify(ctx));
+  console.log('window.user :' + window.user);
+  if (!window.user) return page('/signin');
+
+  next();
+}
 
 function home() {
   console.log('estoy navegando al home');
 
   $('.app-container').html(homeTemplate);
-
-  $(document).load(function () {
-    alert('hola');
-    // if ( $('.Signin-name-input')[0].value) {
-
-    // 	// window.location = '/signin'
-    //	page('/signin')
-    // 	console.log('es mayor')
-    // }
-    //window.location = '/signin'
-  });
+  //window.location = '/signin'
 }
 
-function signin() {
+function signin(ctx, next) {
   console.log('estoy navegando a signin');
 
   $('.app-container').html(signinTemplate);
@@ -40,8 +38,10 @@ function signin() {
     event.preventDefault();
     //obteniendo el contenido del input
     var username = $('.Signin-name-input')[0].value;
+
     if (!username) return alert('Ingrese un nombre valido');
 
+    window.user = { username: username };
     page('/');
   });
 }
