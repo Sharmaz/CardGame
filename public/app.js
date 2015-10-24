@@ -6,7 +6,7 @@ var page = require('page');
 
 //page('ruta destino', que quiero que pase )
 
-var homeTemplate = '<section class="Layout">\n    <section class="Layout-antagonist"> \n      <div class="Card">\n        <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n        <div class="Card-description">Wolverine es muy poderoso</div>\n        <div class="Card-attack">500 puntos de ataque</div>\n      </div>\n      <div class="Card">\n        <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n        <div class="Card-description">Wolverine es muy poderoso</div>\n        <div class="Card-attack">500 puntos de ataque</div>\n      </div>\n      <div class="Card">\n        <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n        <div class="Card-description">Wolverine es muy poderoso</div>\n        <div class="Card-attack">500 puntos de ataque</div>\n      </div>\n      <div class="Card">\n        <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n        <div class="Card-description">Wolverine es muy poderoso</div>\n        <div class="Card-attack">500 puntos de ataque</div>\n      </div>\n      <div class="Card">\n        <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n        <div class="Card-description">Wolverine es muy poderoso</div>\n        <div class="Card-attack">500 puntos de ataque</div>\n      </div>\n    </section>\n    <section class="Layout-main">\n      <div class="Layout-status">\n        <div class="Layout-status">\n          <div class="Status">\n            <h3 class="Status-player">iRobles</h3>\n            <p class="Status-points">100000</p>\n          </div>\n        </div>\n        <div class="Layout-status">\n          <div class="Status">\n            <h3 class="Status-player">Sharmaz</h3>\n            <p class="Status-points">100000</p>\n          </div>\n        </div>\n      </div>\n      <div class="Layout-battle">\n        <div class="Battle">\n          <div class="Battle-antagonist">\n            <div class="Card">\n              <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n              <div class="Card-description">Wolverine es muy poderoso</div>\n              <div class="Card-attack">500 puntos de ataque</div>\n            </div>\n            <div class="Card">\n              <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n              <div class="Card-description">Wolverine es muy poderoso</div>\n              <div class="Card-attack">500 puntos de ataque</div>\n            </div>\n            <div class="Card">\n              <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n              <div class="Card-description">Wolverine es muy poderoso</div>\n              <div class="Card-attack">500 puntos de ataque</div>\n            </div>\n            <div class="Card">\n              <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n              <div class="Card-description">Wolverine es muy poderoso</div>\n              <div class="Card-attack">500 puntos de ataque</div>\n            </div>\n            <div class="Card">\n              <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n              <div class="Card-description">Wolverine es muy poderoso</div>\n              <div class="Card-attack">500 puntos de ataque</div>\n            </div>\n          </div>\n          <div class="Battle-player">\n            <div class="Card">\n              <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n              <div class="Card-description">Wolverine es muy poderoso</div>\n              <div class="Card-attack">500 puntos de ataque</div>\n            </div>\n            <div class="Card">\n              <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n              <div class="Card-description">Wolverine es muy poderoso</div>\n              <div class="Card-attack">500 puntos de ataque</div>\n            </div>\n            <div class="Card">\n              <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n              <div class="Card-description">Wolverine es muy poderoso</div>\n              <div class="Card-attack">500 puntos de ataque</div>\n            </div>\n            <div class="Card">\n              <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n              <div class="Card-description">Wolverine es muy poderoso</div>\n              <div class="Card-attack">500 puntos de ataque</div>\n            </div>\n            <div class="Card">\n              <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n              <div class="Card-description">Wolverine es muy poderoso</div>\n              <div class="Card-attack">500 puntos de ataque</div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class="Layout-phases"> \n        <div class="Phases">\n          <p>WTF! ese ataque fue super efectivo, has bajado 300 puntos a tu oponente</p>\n        </div>\n      </div>\n    </section>\n    <section class="Layout-player"> \n      <div class="Card">\n        <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n        <div class="Card-description">Wolverine es muy poderoso</div>\n        <div class="Card-attack">500 puntos de ataque</div>\n      </div>\n      <div class="Card">\n        <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n        <div class="Card-description">Wolverine es muy poderoso</div>\n        <div class="Card-attack">500 puntos de ataque</div>\n      </div>\n      <div class="Card">\n        <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n        <div class="Card-description">Wolverine es muy poderoso</div>\n        <div class="Card-attack">500 puntos de ataque</div>\n      </div>\n      <div class="Card">\n        <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n        <div class="Card-description">Wolverine es muy poderoso</div>\n        <div class="Card-attack">500 puntos de ataque</div>\n      </div>\n      <div class="Card">\n        <h2 class="Card-name">Wolverine</h2><img src="./public/images/wolverine.jpg" alt="wolverine" class="Card-image"/>\n        <div class="Card-description">Wolverine es muy poderoso</div>\n        <div class="Card-attack">500 puntos de ataque</div>\n      </div>\n    </section>\n  </section>';
+var homeTemplate = require('./layout/template.jade');
 
 var signinTemplate = '<label>Ingresa tu nombre</label>\n  <input type="text" id="firstName" name="firstName" tabindex="1" placeholder="nombre" class="Signin-name-input"/>\n  <button tabindex="2" class="Signin-button">Ingresar</button>';
 
@@ -15,41 +15,170 @@ page('/signin', signin);
 page();
 
 function restrict(ctx, next) {
-  console.log('Restricting');
-  console.log('Context :' + JSON.stringify(ctx));
-  console.log('window.user :' + window.user);
-  if (!window.user) return page('/signin');
+	console.log('Restricting');
+	console.log('Context :' + JSON.stringify(ctx));
+	console.log('window.user :' + window.user);
+	if (!window.user) return page('/signin');
 
-  next();
+	next();
 }
 
 function home() {
-  console.log('estoy navegando al home');
+	console.log('estoy navegando al home');
 
-  $('.app-container').html(homeTemplate);
-  //window.location = '/signin'
+	$('.app-container').html(homeTemplate);
+	//window.location = '/signin'
 }
 
 function signin(ctx, next) {
-  console.log('estoy navegando a signin');
+	console.log('estoy navegando a signin');
 
-  $('.app-container').html(signinTemplate);
+	$('.app-container').html(signinTemplate);
 
-  $('.Signin-button').on('click', function (event) {
-    event.preventDefault();
-    //obteniendo el contenido del input
-    var username = $('.Signin-name-input')[0].value;
+	$('.Signin-button').on('click', function (event) {
+		event.preventDefault();
+		//obteniendo el contenido del input
+		var username = $('.Signin-name-input')[0].value;
 
-    if (!username) return alert('Ingrese un nombre valido');
+		if (!username) return alert('Ingrese un nombre valido');
 
-    window.user = { username: username };
-    page('/');
-  });
+		window.user = { username: username };
+		page('/');
+	});
 }
 
 page({ hashbang: true });
 
-},{"jquery":3,"page":4}],2:[function(require,module,exports){
+},{"./layout/template.jade":2,"jquery":6,"page":7}],2:[function(require,module,exports){
+var jade = require("jade/runtime");
+
+module.exports = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (text, undefined) {
+buf.push("<section class=\"Layout\"><section class=\"Layout-antagonist\"> ");
+// iterate [1,2,3,4,5]
+;(function(){
+  var $$obj = [1,2,3,4,5];
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var card = $$obj[$index];
+
+buf.push("<div class=\"Card\"><h2 class=\"Card-name\">Wolverine</h2><img src=\"./public/images/wolverine.jpg\" alt=\"wolverine\" class=\"Card-image\"/><div class=\"Card-description\">Wolverine es muy poderoso</div><div class=\"Card-attack\">500 puntos de ataque</div></div>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var card = $$obj[$index];
+
+buf.push("<div class=\"Card\"><h2 class=\"Card-name\">Wolverine</h2><img src=\"./public/images/wolverine.jpg\" alt=\"wolverine\" class=\"Card-image\"/><div class=\"Card-description\">Wolverine es muy poderoso</div><div class=\"Card-attack\">500 puntos de ataque</div></div>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</section><section class=\"Layout-main\"><div class=\"Layout-status\">");
+// iterate ["iRobles", "Sharmaz"]
+;(function(){
+  var $$obj = ["iRobles", "Sharmaz"];
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var name = $$obj[$index];
+
+buf.push("<div class=\"Layout-status\"><div class=\"Status\"><h3 class=\"Status-player\">" + (jade.escape(null == (jade_interp = name) ? "" : jade_interp)) + "</h3><p class=\"Status-points\">100000</p></div></div>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var name = $$obj[$index];
+
+buf.push("<div class=\"Layout-status\"><div class=\"Status\"><h3 class=\"Status-player\">" + (jade.escape(null == (jade_interp = name) ? "" : jade_interp)) + "</h3><p class=\"Status-points\">100000</p></div></div>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</div><div class=\"Layout-battle\"><div class=\"Battle\"><div class=\"Battle-antagonist\">");
+// iterate [1,2,3,4,5]
+;(function(){
+  var $$obj = [1,2,3,4,5];
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var card = $$obj[$index];
+
+buf.push("<div class=\"Card\"><h2 class=\"Card-name\">Wolverine</h2><img src=\"./public/images/wolverine.jpg\" alt=\"wolverine\" class=\"Card-image\"/><div class=\"Card-description\">Wolverine es muy poderoso</div><div class=\"Card-attack\">500 puntos de ataque</div></div>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var card = $$obj[$index];
+
+buf.push("<div class=\"Card\"><h2 class=\"Card-name\">Wolverine</h2><img src=\"./public/images/wolverine.jpg\" alt=\"wolverine\" class=\"Card-image\"/><div class=\"Card-description\">Wolverine es muy poderoso</div><div class=\"Card-attack\">500 puntos de ataque</div></div>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</div><div class=\"Battle-player\">");
+// iterate [1,2,3,4,5]
+;(function(){
+  var $$obj = [1,2,3,4,5];
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var card = $$obj[$index];
+
+buf.push("<div class=\"Card\"><h2 class=\"Card-name\">Wolverine</h2><img src=\"./public/images/wolverine.jpg\" alt=\"wolverine\" class=\"Card-image\"/><div class=\"Card-description\">Wolverine es muy poderoso</div><div class=\"Card-attack\">500 puntos de ataque</div></div>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var card = $$obj[$index];
+
+buf.push("<div class=\"Card\"><h2 class=\"Card-name\">Wolverine</h2><img src=\"./public/images/wolverine.jpg\" alt=\"wolverine\" class=\"Card-image\"/><div class=\"Card-description\">Wolverine es muy poderoso</div><div class=\"Card-attack\">500 puntos de ataque</div></div>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</div></div></div><div class=\"Layout-phases\"> ");
+text = "WTF! ese ataque fue super efectivo, has bajado 300 puntos a tu oponente"
+buf.push("<div class=\"Phases\"><p>" + (jade.escape(null == (jade_interp = text) ? "" : jade_interp)) + "</p></div></div></section><section class=\"Layout-player\"> ");
+// iterate [1,2,3,4,5]
+;(function(){
+  var $$obj = [1,2,3,4,5];
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var card = $$obj[$index];
+
+buf.push("<div class=\"Card\"><h2 class=\"Card-name\">Wolverine</h2><img src=\"./public/images/wolverine.jpg\" alt=\"wolverine\" class=\"Card-image\"/><div class=\"Card-description\">Wolverine es muy poderoso</div><div class=\"Card-attack\">500 puntos de ataque</div></div>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var card = $$obj[$index];
+
+buf.push("<div class=\"Card\"><h2 class=\"Card-name\">Wolverine</h2><img src=\"./public/images/wolverine.jpg\" alt=\"wolverine\" class=\"Card-image\"/><div class=\"Card-description\">Wolverine es muy poderoso</div><div class=\"Card-attack\">500 puntos de ataque</div></div>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</section></section>");}.call(this,"text" in locals_for_with?locals_for_with.text:typeof text!=="undefined"?text:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+};
+},{"jade/runtime":5}],3:[function(require,module,exports){
+
+},{}],4:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -142,7 +271,262 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],3:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
+(function (global){
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.jade = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+'use strict';
+
+/**
+ * Merge two attribute objects giving precedence
+ * to values in object `b`. Classes are special-cased
+ * allowing for arrays and merging/joining appropriately
+ * resulting in a string.
+ *
+ * @param {Object} a
+ * @param {Object} b
+ * @return {Object} a
+ * @api private
+ */
+
+exports.merge = function merge(a, b) {
+  if (arguments.length === 1) {
+    var attrs = a[0];
+    for (var i = 1; i < a.length; i++) {
+      attrs = merge(attrs, a[i]);
+    }
+    return attrs;
+  }
+  var ac = a['class'];
+  var bc = b['class'];
+
+  if (ac || bc) {
+    ac = ac || [];
+    bc = bc || [];
+    if (!Array.isArray(ac)) ac = [ac];
+    if (!Array.isArray(bc)) bc = [bc];
+    a['class'] = ac.concat(bc).filter(nulls);
+  }
+
+  for (var key in b) {
+    if (key != 'class') {
+      a[key] = b[key];
+    }
+  }
+
+  return a;
+};
+
+/**
+ * Filter null `val`s.
+ *
+ * @param {*} val
+ * @return {Boolean}
+ * @api private
+ */
+
+function nulls(val) {
+  return val != null && val !== '';
+}
+
+/**
+ * join array as classes.
+ *
+ * @param {*} val
+ * @return {String}
+ */
+exports.joinClasses = joinClasses;
+function joinClasses(val) {
+  return (Array.isArray(val) ? val.map(joinClasses) :
+    (val && typeof val === 'object') ? Object.keys(val).filter(function (key) { return val[key]; }) :
+    [val]).filter(nulls).join(' ');
+}
+
+/**
+ * Render the given classes.
+ *
+ * @param {Array} classes
+ * @param {Array.<Boolean>} escaped
+ * @return {String}
+ */
+exports.cls = function cls(classes, escaped) {
+  var buf = [];
+  for (var i = 0; i < classes.length; i++) {
+    if (escaped && escaped[i]) {
+      buf.push(exports.escape(joinClasses([classes[i]])));
+    } else {
+      buf.push(joinClasses(classes[i]));
+    }
+  }
+  var text = joinClasses(buf);
+  if (text.length) {
+    return ' class="' + text + '"';
+  } else {
+    return '';
+  }
+};
+
+
+exports.style = function (val) {
+  if (val && typeof val === 'object') {
+    return Object.keys(val).map(function (style) {
+      return style + ':' + val[style];
+    }).join(';');
+  } else {
+    return val;
+  }
+};
+/**
+ * Render the given attribute.
+ *
+ * @param {String} key
+ * @param {String} val
+ * @param {Boolean} escaped
+ * @param {Boolean} terse
+ * @return {String}
+ */
+exports.attr = function attr(key, val, escaped, terse) {
+  if (key === 'style') {
+    val = exports.style(val);
+  }
+  if ('boolean' == typeof val || null == val) {
+    if (val) {
+      return ' ' + (terse ? key : key + '="' + key + '"');
+    } else {
+      return '';
+    }
+  } else if (0 == key.indexOf('data') && 'string' != typeof val) {
+    if (JSON.stringify(val).indexOf('&') !== -1) {
+      console.warn('Since Jade 2.0.0, ampersands (`&`) in data attributes ' +
+                   'will be escaped to `&amp;`');
+    };
+    if (val && typeof val.toISOString === 'function') {
+      console.warn('Jade will eliminate the double quotes around dates in ' +
+                   'ISO form after 2.0.0');
+    }
+    return ' ' + key + "='" + JSON.stringify(val).replace(/'/g, '&apos;') + "'";
+  } else if (escaped) {
+    if (val && typeof val.toISOString === 'function') {
+      console.warn('Jade will stringify dates in ISO form after 2.0.0');
+    }
+    return ' ' + key + '="' + exports.escape(val) + '"';
+  } else {
+    if (val && typeof val.toISOString === 'function') {
+      console.warn('Jade will stringify dates in ISO form after 2.0.0');
+    }
+    return ' ' + key + '="' + val + '"';
+  }
+};
+
+/**
+ * Render the given attributes object.
+ *
+ * @param {Object} obj
+ * @param {Object} escaped
+ * @return {String}
+ */
+exports.attrs = function attrs(obj, terse){
+  var buf = [];
+
+  var keys = Object.keys(obj);
+
+  if (keys.length) {
+    for (var i = 0; i < keys.length; ++i) {
+      var key = keys[i]
+        , val = obj[key];
+
+      if ('class' == key) {
+        if (val = joinClasses(val)) {
+          buf.push(' ' + key + '="' + val + '"');
+        }
+      } else {
+        buf.push(exports.attr(key, val, false, terse));
+      }
+    }
+  }
+
+  return buf.join('');
+};
+
+/**
+ * Escape the given string of `html`.
+ *
+ * @param {String} html
+ * @return {String}
+ * @api private
+ */
+
+var jade_encode_html_rules = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;'
+};
+var jade_match_html = /[&<>"]/g;
+
+function jade_encode_char(c) {
+  return jade_encode_html_rules[c] || c;
+}
+
+exports.escape = jade_escape;
+function jade_escape(html){
+  var result = String(html).replace(jade_match_html, jade_encode_char);
+  if (result === '' + html) return html;
+  else return result;
+};
+
+/**
+ * Re-throw the given `err` in context to the
+ * the jade in `filename` at the given `lineno`.
+ *
+ * @param {Error} err
+ * @param {String} filename
+ * @param {String} lineno
+ * @api private
+ */
+
+exports.rethrow = function rethrow(err, filename, lineno, str){
+  if (!(err instanceof Error)) throw err;
+  if ((typeof window != 'undefined' || !filename) && !str) {
+    err.message += ' on line ' + lineno;
+    throw err;
+  }
+  try {
+    str = str || require('fs').readFileSync(filename, 'utf8')
+  } catch (ex) {
+    rethrow(err, null, lineno)
+  }
+  var context = 3
+    , lines = str.split('\n')
+    , start = Math.max(lineno - context, 0)
+    , end = Math.min(lines.length, lineno + context);
+
+  // Error context
+  var context = lines.slice(start, end).map(function(line, i){
+    var curr = i + start + 1;
+    return (curr == lineno ? '  > ' : '    ')
+      + curr
+      + '| '
+      + line;
+  }).join('\n');
+
+  // Alter exception message
+  err.path = filename;
+  err.message = (filename || 'Jade') + ':' + lineno
+    + '\n' + context + '\n\n' + err.message;
+  throw err;
+};
+
+exports.DebugItem = function DebugItem(lineno, filename) {
+  this.lineno = lineno;
+  this.filename = filename;
+}
+
+},{"fs":2}],2:[function(require,module,exports){
+
+},{}]},{},[1])(1)
+});
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"fs":3}],6:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
@@ -9354,7 +9738,7 @@ return jQuery;
 
 }));
 
-},{}],4:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 (function (process){
   /* globals require, module */
 
@@ -9977,7 +10361,7 @@ return jQuery;
   page.sameOrigin = sameOrigin;
 
 }).call(this,require('_process'))
-},{"_process":2,"path-to-regexp":5}],5:[function(require,module,exports){
+},{"_process":4,"path-to-regexp":8}],8:[function(require,module,exports){
 var isarray = require('isarray')
 
 /**
@@ -10369,7 +10753,7 @@ function pathToRegexp (path, keys, options) {
   return stringToRegexp(path, keys, options)
 }
 
-},{"isarray":6}],6:[function(require,module,exports){
+},{"isarray":9}],9:[function(require,module,exports){
 module.exports = Array.isArray || function (arr) {
   return Object.prototype.toString.call(arr) == '[object Array]';
 };

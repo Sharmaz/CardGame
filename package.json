@@ -4,6 +4,6 @@
 		"stylus": "stylus --use nib --watch lib/app.styl --out public/css",
 		"server": "http-server .",
 		"babel": "babel --watch lib --out-dir public",
-		"build": "browserify -t babelify lib/app.js > public/app.js"
+		"build": "browserify -t babelify -t jadeify lib/app.js > public/app.js"
 	}
 }
