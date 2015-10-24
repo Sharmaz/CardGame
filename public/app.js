@@ -4,15 +4,21 @@
 var $ = require('jquery');
 var page = require('page');
 
+require('./layout/layout.js');
+require('./signin/signin.js');
 //page('ruta destino', que quiero que pase )
 
-var homeTemplate = require('./layout/template.jade');
+page();
 
-var signinTemplate = '<label>Ingresa tu nombre</label>\n  <input type="text" id="firstName" name="firstName" tabindex="1" placeholder="nombre" class="Signin-name-input"/>\n  <button tabindex="2" class="Signin-button">Ingresar</button>';
+},{"./layout/layout.js":2,"./signin/signin.js":4,"jquery":9,"page":10}],2:[function(require,module,exports){
+'use strict';
+
+var $ = require('jquery');
+var page = require('page');
+
+var homeTemplate = require('./template.jade');
 
 page('/', restrict, home);
-page('/signin', signin);
-page();
 
 function restrict(ctx, next) {
 	console.log('Restricting');
@@ -30,26 +36,7 @@ function home() {
 	//window.location = '/signin'
 }
 
-function signin(ctx, next) {
-	console.log('estoy navegando a signin');
-
-	$('.app-container').html(signinTemplate);
-
-	$('.Signin-button').on('click', function (event) {
-		event.preventDefault();
-		//obteniendo el contenido del input
-		var username = $('.Signin-name-input')[0].value;
-
-		if (!username) return alert('Ingrese un nombre valido');
-
-		window.user = { username: username };
-		page('/');
-	});
-}
-
-page({ hashbang: true });
-
-},{"./layout/template.jade":2,"jquery":6,"page":7}],2:[function(require,module,exports){
+},{"./template.jade":3,"jquery":9,"page":10}],3:[function(require,module,exports){
 var jade = require("jade/runtime");
 
 module.exports = function template(locals) {
@@ -176,9 +163,46 @@ buf.push("<div class=\"Card\"><h2 class=\"Card-name\">Wolverine</h2><img src=\".
 
 buf.push("</section></section>");}.call(this,"text" in locals_for_with?locals_for_with.text:typeof text!=="undefined"?text:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
 };
-},{"jade/runtime":5}],3:[function(require,module,exports){
+},{"jade/runtime":8}],4:[function(require,module,exports){
+'use strict';
 
-},{}],4:[function(require,module,exports){
+var $ = require('jquery');
+var page = require('page');
+
+var signinTemplate = require('./template.jade');
+
+page('/signin', signin);
+
+function signin(ctx, next) {
+	console.log('estoy navegando a signin');
+
+	$('.app-container').html(signinTemplate);
+
+	$('.Signin-button').on('click', function (event) {
+		event.preventDefault();
+		//obteniendo el contenido del input
+		var username = $('.Signin-name-input')[0].value;
+
+		if (!username) return alert('Ingrese un nombre valido');
+
+		window.user = { username: username };
+		page('/');
+	});
+}
+
+},{"./template.jade":5,"jquery":9,"page":10}],5:[function(require,module,exports){
+var jade = require("jade/runtime");
+
+module.exports = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+
+buf.push("<div class=\"Signin-container\"><label>Ingresa tu nombre</label><input type=\"text\" id=\"firstName\" name=\"firstName\" tabindex=\"1\" placeholder=\"nombre\" class=\"Signin-name-input\"/><button tabindex=\"2\" class=\"Signin-button\">Ingresar</button></div>");;return buf.join("");
+};
+},{"jade/runtime":8}],6:[function(require,module,exports){
+
+},{}],7:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -271,7 +295,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],5:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 (function (global){
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.jade = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
@@ -526,7 +550,7 @@ exports.DebugItem = function DebugItem(lineno, filename) {
 },{}]},{},[1])(1)
 });
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"fs":3}],6:[function(require,module,exports){
+},{"fs":6}],9:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
@@ -9738,7 +9762,7 @@ return jQuery;
 
 }));
 
-},{}],7:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 (function (process){
   /* globals require, module */
 
@@ -10361,7 +10385,7 @@ return jQuery;
   page.sameOrigin = sameOrigin;
 
 }).call(this,require('_process'))
-},{"_process":4,"path-to-regexp":8}],8:[function(require,module,exports){
+},{"_process":7,"path-to-regexp":11}],11:[function(require,module,exports){
 var isarray = require('isarray')
 
 /**
@@ -10753,7 +10777,7 @@ function pathToRegexp (path, keys, options) {
   return stringToRegexp(path, keys, options)
 }
 
-},{"isarray":9}],9:[function(require,module,exports){
+},{"isarray":12}],12:[function(require,module,exports){
 module.exports = Array.isArray || function (arr) {
   return Object.prototype.toString.call(arr) == '[object Array]';
 };
