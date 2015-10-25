@@ -1,18 +1,15 @@
-var http = require('http')
-var server = http.createServer(function(req, res) {
-	res.writeHead(200, {'Content-Type': 'text/html'})
-	res.write('<!DOCTYPE "html">')
-	res.write('<html>')
-	res.write('<head>')
-	res.write('<title>Hello World!</title>')
-	res.write('<body>')
-	res.write('Hello World!')
-	res.write('</body>')
-	res.write('</html>')
-})
+var express = require('express')
+var app = express()
+var http = require('http').Server(app)
 
 var port = 8080
 
-server.listen(port, function() {
-	console.log('Escuchando en el puerto:', port)
+app.get('/', function(req, res) {
+	res.send('<h1>Hello Wold!</h1>')
+})
+
+http.listen(port, function(err) {
+	if (err) return console.log(err)
+
+	console.log('Servidor Escuchando en:', 8080)
 })
