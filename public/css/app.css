@@ -110,18 +110,18 @@
   position: absolute;
 }
 
-.chat #mesagges {
+.chat #messages {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.chat #mesagges li {
+.chat #messages li {
   padding: 5px 10px;
   background: #fff;
 }
 
-.chat #mesagges li:nth-child(odd) {
+.chat #messages li:nth-child(odd) {
   background: #eee;
 }
 
@@ -189,7 +189,7 @@
 }
 
 .Layout-phases {
-  bacground-color: #fff;
+  background-color: #fff;
   position: relative;
   width: 200px;
 }
