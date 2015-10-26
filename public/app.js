@@ -10,11 +10,35 @@ require('./signin/signin.js');
 
 page();
 
-},{"./layout/layout.js":2,"./signin/signin.js":4,"jquery":9,"page":10}],2:[function(require,module,exports){
+},{"./layout/layout.js":4,"./signin/signin.js":6,"jquery":11,"page":12}],2:[function(require,module,exports){
+'use strict';
+
+var template = require('./template.jade');
+
+var $ = require('jquery');
+
+function Chat(selector) {
+	$(selector).html(template());
+}
+
+module.exports = Chat;
+
+},{"./template.jade":3,"jquery":11}],3:[function(require,module,exports){
+var jade = require("jade/runtime");
+
+module.exports = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+
+buf.push("<div class=\"chat\"><ul id=\"messages\"></ul><form action=\"\"><input id=\"m\" autocomplete=\"off\"/><button>Enviar</button></form></div>");;return buf.join("");
+};
+},{"jade/runtime":10}],4:[function(require,module,exports){
 'use strict';
 
 var $ = require('jquery');
 var page = require('page');
+var Chat = require('../chat/chat.js');
 
 var homeTemplate = require('./template.jade');
 
@@ -34,9 +58,10 @@ function home() {
 
 	$('.app-container').html(homeTemplate);
 	//window.location = '/signin'
+	var chat = new Chat('.Layout-phases');
 }
 
-},{"./template.jade":3,"jquery":9,"page":10}],3:[function(require,module,exports){
+},{"../chat/chat.js":2,"./template.jade":5,"jquery":11,"page":12}],5:[function(require,module,exports){
 var jade = require("jade/runtime");
 
 module.exports = function template(locals) {
@@ -163,7 +188,7 @@ buf.push("<div class=\"Card\"><h2 class=\"Card-name\">Wolverine</h2><img src=\".
 
 buf.push("</section></section>");}.call(this,"text" in locals_for_with?locals_for_with.text:typeof text!=="undefined"?text:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
 };
-},{"jade/runtime":8}],4:[function(require,module,exports){
+},{"jade/runtime":10}],6:[function(require,module,exports){
 'use strict';
 
 var $ = require('jquery');
@@ -190,7 +215,7 @@ function signin(ctx, next) {
 	});
 }
 
-},{"./template.jade":5,"jquery":9,"page":10}],5:[function(require,module,exports){
+},{"./template.jade":7,"jquery":11,"page":12}],7:[function(require,module,exports){
 var jade = require("jade/runtime");
 
 module.exports = function template(locals) {
@@ -200,9 +225,9 @@ var jade_interp;
 
 buf.push("<div class=\"Signin-container\"><label>Ingresa tu nombre</label><input type=\"text\" id=\"firstName\" name=\"firstName\" tabindex=\"1\" placeholder=\"nombre\" class=\"Signin-name-input\"/><button tabindex=\"2\" class=\"Signin-button\">Ingresar</button></div>");;return buf.join("");
 };
-},{"jade/runtime":8}],6:[function(require,module,exports){
+},{"jade/runtime":10}],8:[function(require,module,exports){
 
-},{}],7:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -295,7 +320,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],8:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 (function (global){
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.jade = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
@@ -550,7 +575,7 @@ exports.DebugItem = function DebugItem(lineno, filename) {
 },{}]},{},[1])(1)
 });
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"fs":6}],9:[function(require,module,exports){
+},{"fs":8}],11:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
@@ -9762,7 +9787,7 @@ return jQuery;
 
 }));
 
-},{}],10:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 (function (process){
   /* globals require, module */
 
@@ -10385,7 +10410,7 @@ return jQuery;
   page.sameOrigin = sameOrigin;
 
 }).call(this,require('_process'))
-},{"_process":7,"path-to-regexp":11}],11:[function(require,module,exports){
+},{"_process":9,"path-to-regexp":13}],13:[function(require,module,exports){
 var isarray = require('isarray')
 
 /**
@@ -10777,7 +10802,7 @@ function pathToRegexp (path, keys, options) {
   return stringToRegexp(path, keys, options)
 }
 
-},{"isarray":12}],12:[function(require,module,exports){
+},{"isarray":14}],14:[function(require,module,exports){
 module.exports = Array.isArray || function (arr) {
   return Object.prototype.toString.call(arr) == '[object Array]';
 };

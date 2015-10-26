@@ -1,1 +1,255 @@
-.Battle-antagonist,.Battle-player{display:-webkit-box;display:-moz-box;display:-webkit-flex;display:-ms-flexbox}.Card{width:170px;background:#c2ac37;border:5px solid #000;-webkit-box-shadow:0 0 10px rgba(0,0,0,.5);box-shadow:0 0 10px rgba(0,0,0,.5);-webkit-border-radius:.5rem;border-radius:.5rem;padding:.5rem}.Card-description{background:#fff;padding:.5rem;font-size:12px;margin-bottom:.5rem;border:2px solid #000}.Card-name{color:#fff;font-size:1rem;text-transform:uppercase;margin:0 0 .5rem;white-space:nowrap;overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis}.Battle-antagonist>div,.Battle-player>div{margin:5px}.Card-image{width:100%}.Card-attack{background:#000;color:#fff;font-size:.8rem}.Battle{padding:.3rem}.Battle-antagonist{display:box;display:flex;-webkit-box-pack:justify;-moz-box-pack:justify;-o-box-pack:justify;-ms-flex-pack:justify;-webkit-justify-content:space-between;justify-content:space-between}.Battle-player{display:box;display:flex;-webkit-box-pack:justify;-moz-box-pack:justify;-o-box-pack:justify;-ms-flex-pack:justify;-webkit-justify-content:space-between;justify-content:space-between}.Layout,.Layout-main{display:-webkit-box;display:-moz-box;display:-webkit-flex;display:-ms-flexbox}.Layout,.Layout>section{margin:.5rem}.Layout{background-image:url(../images/city.jpg);-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;display:box;display:flex;-webkit-box-orient:vertical;-moz-box-orient:vertical;-o-box-orient:vertical;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-moz-box-pack:justify;-o-box-pack:justify;-ms-flex-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;min-height:100vh;padding:.5rem}.Layout-main{display:box;display:flex;-webkit-box-pack:justify;-moz-box-pack:justify;-o-box-pack:justify;-ms-flex-pack:justify;-webkit-justify-content:space-between;justify-content:space-between}.Layout-status{width:200px}.Layout-battle{background-image:url(../images/pattern.jpg);-webkit-box-flex:1;-moz-box-flex:1;-o-box-flex:1;box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;margin:.5rem}.Layout-phases{position:relative;width:200px}.Layout-antagonist,.Layout-player{display:-webkit-box;display:-moz-box;display:-webkit-flex;display:-ms-flexbox;display:box;display:flex;-webkit-box-pack:justify;-moz-box-pack:justify;-o-box-pack:justify;-ms-flex-pack:justify;-webkit-justify-content:space-between;justify-content:space-between}.Status{background:orange}.Status-player{background:red;color:#fff;margin:0;padding:.5rem}.Status-points{margin:0;padding:.5rem;text-align:center}.Phases{background:#fff;border:5px dashed red;position:absolute;right:0}body{font-family:Arial;margin:0;padding:0}
+.Battle {
+  padding: 0.3rem;
+}
+
+.Battle-antagonist {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.Battle-antagonist > div {
+  margin: 5px;
+}
+
+.Battle-player {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.Battle-player > div {
+  margin: 5px;
+}
+
+.Card {
+  width: 170px;
+  background: #c2ac37;
+  border: 5px solid #000;
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.Card-description {
+  background: #fff;
+  padding: 0.5rem;
+  font-size: 12px;
+  margin-bottom: 0.5rem;
+  border: 2px solid #000;
+}
+
+.Card-name {
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.Card-image {
+  width: 100%;
+}
+
+.Card-attack {
+  background: #000;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.chat {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font: 13px Helvetica, Arial;
+}
+
+.chat form {
+  background: #000;
+  padding: 3px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.chat form input {
+  border: 0;
+  padding: 10px;
+  margin-rigth: 0.5%;
+}
+
+.chat form button {
+  background: #82e0ff;
+  border: none;
+  padding: 10px;
+  position: absolute;
+}
+
+.chat #mesagges {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chat #mesagges li {
+  padding: 5px 10px;
+  background: #fff;
+}
+
+.chat #mesagges li:nth-child(odd) {
+  background: #eee;
+}
+
+.Layout {
+  background-image: url("../images/city.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin: 0.5rem;
+  min-height: 100vh;
+  padding: 0.5rem;
+}
+
+.Layout > section {
+  margin: 0.5rem;
+}
+
+.Layout-main {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.Layout-status {
+  width: 200px;
+}
+
+.Layout-battle {
+  background-image: url("../images/pattern.jpg");
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0.5rem;
+}
+
+.Layout-phases {
+  bacground-color: #fff;
+  position: relative;
+  width: 200px;
+}
+
+.Layout-antagonist {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.Layout-player {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.Phases {
+  background: #fff;
+  border: 5px dashed #f00;
+  position: absolute;
+  right: 0;
+}
+
+.Status {
+  background: #ffa500;
+}
+
+.Status-player {
+  background: #f00;
+  color: #fff;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.Status-points {
+  margin: 0;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
